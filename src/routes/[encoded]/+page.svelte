@@ -3,7 +3,7 @@
 
     export let data;
     onMount(() => {
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        //window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     })
 </script>
 
@@ -26,3 +26,4 @@
 	<meta name="twitter:url" content={data.u} />
 	<meta name="twitter:image" content={data.i} />
 </svelte:head>
+<meta http-equiv="refresh" content="0; URL=gotcha.mp4" />

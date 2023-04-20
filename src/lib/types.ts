@@ -4,5 +4,4 @@ export interface AvailableMeta {
     th: string;
     ty: 'summary' | 'summary_large_image';
     i: string;
-    u: string;
 }

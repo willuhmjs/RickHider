@@ -1,9 +1,8 @@
 export interface AvailableMeta {
-    title: string;
-    description: string;
-    themeColor: string;
-    type: 'summary' | 'summary_large_image';
-    imageUrl: string;
-    url: string;
-    siteName: string;
+    t: string;
+    d: string;
+    th: string;
+    ty: 'summary' | 'summary_large_image';
+    i: string;
+    u: string;
 }

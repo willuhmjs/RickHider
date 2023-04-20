@@ -9,20 +9,19 @@
 
 <!-- og meta tags -->
 <svelte:head>
-    {#if data.title}
-        <title>{data.title}</title>
+    {#if data.t}
+        <title>{data.t}</title>
     {/if}
-    <meta property="og:type" content={data.type || "summary"} />
-    <meta name="theme-color" content={data.themeColor} />
-    <meta property="og:title" content={data.title} />
-    <meta property="og:description" content={data.description} />
-    <meta property="og:url" content={data.url} />
-    <meta property="og:image" content={data.imageUrl} />
-    <meta property="og:site-name" content={data.siteName} />
+    <meta property="og:type" content={data.ty || "summary"} />
+    <meta name="theme-color" content={data.th} />
+    <meta property="og:title" content={data.t} />
+    <meta property="og:description" content={data.d} />
+    <meta property="og:url" content={data.u} />
+    <meta property="og:image" content={data.i} />
 
-	<meta name="twitter:card" content={data.type || "summary"} />
-	<meta name="twitter:title" content={data.title} />
-	<meta name="twitter:description" content={data.description} />
-	<meta name="twitter:url" content={data.url} />
-	<meta name="twitter:image" content={data.imageUrl} />
+	<meta name="twitter:card" content={data.ty || "summary"} />
+	<meta name="twitter:title" content={data.t} />
+	<meta name="twitter:description" content={data.d} />
+	<meta name="twitter:url" content={data.u} />
+	<meta name="twitter:image" content={data.i} />
 </svelte:head>

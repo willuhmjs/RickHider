@@ -14,6 +14,7 @@
     {/if}
     <meta property="og:type" content={data.ty || "summary"} />
     <meta name="theme-color" content={data.th} />
+    <meta name="description" content={data.d}/>
     <meta property="og:title" content={data.t} />
     <meta property="og:description" content={data.d} />
     <meta property="og:url" content={data.u} />

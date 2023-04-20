@@ -15,10 +15,10 @@
       i: 'Image',
     };
     let params: AvailableMeta = {
+        ty: 'summary_large_image',
         t: '',
         d: '',
         th: '',
-        ty: 'summary_large_image',
         i: '',
     }
     $: url = `${window.location.protocol}//${window.location.host}/${window.btoa(new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([_, v]) => v !== ''))).toString())}`

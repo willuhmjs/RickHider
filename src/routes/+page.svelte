@@ -50,6 +50,7 @@
 {/each}
   </section>
   <section>
+    <!-- preview of meta tag => embedded rickroll URL -->
     {#if url}
     <a href={url}>{url}</a>
   {/if}
@@ -58,6 +59,10 @@
 <style lang="scss">
   .inputGroup {
     margin: 0.5rem 0;
+  }
+
+  a {
+    word-break: break-word;
   }
 
   main {

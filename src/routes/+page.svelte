@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { AvailableMeta } from "$lib/types";
-    let plaintext = "";
 
     let params: AvailableMeta = {
         title: '',

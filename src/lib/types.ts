@@ -4,5 +4,4 @@ export interface AvailableMeta {
     d: string;
     th: string;
     i: string;
-    u: string;
 }

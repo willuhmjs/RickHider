@@ -1,13 +1,14 @@
 <script lang="ts">
     import params from "$lib/params";
-    let placeholders = {
+	import type { AvailableMeta } from "./types";
+    let placeholders: AvailableMeta = {
       t: 'GitHub: Let’s build from here',
       d: 'GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea...',
       th: '#1e2327',
       ty: 'Type',
       i: 'https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png',
     };
-    let labels = {
+    let labels: AvailableMeta = {
       t: 'Title',
       d: 'Description',
       th: 'Theme Color',

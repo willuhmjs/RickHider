@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { metaStore } from '$lib/meta';
+	import { metaStore, placeholders } from '$lib/meta';
 </script>
 
 <div class="twitter-card">
 	{#if $metaStore.i}
 		<div class="twitter-img-div">
 			<img
-				src={$metaStore.i}
+				src={$metaStore.i || placeholders.i}
 				alt="Selected img preview"
 				on:load={(e) => (e.target.style.display = 'block')}
 				on:error={(e) => (e.target.style.display = 'none')}
@@ -17,8 +17,8 @@
 		</div>
 	{/if}
 	<div class="twitter-textarea">
-		<p class="twitter-title">{$metaStore.t}</p>
-		<p class="twitter-description">{$metaStore.d}</p>
+		<p class="twitter-title">{($metaStore.t || $metaStore.d) ? ($metaStore.t || "") : placeholders.t}</p>
+		<p class="twitter-description">{($metaStore.t || $metaStore.d) ? ($metaStore.d || "") : placeholders.d}</p>
 	</div>
 </div>
 

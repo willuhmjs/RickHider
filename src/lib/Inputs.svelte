@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { metaStore } from '$lib/meta';
-	import { placeholders, labels } from '$lib/meta';
+	import { placeholders, labels, metaStore } from '$lib/meta';
 
 </script>
 

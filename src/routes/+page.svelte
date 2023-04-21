@@ -1,22 +1,28 @@
 <script lang="ts">
     import Inputs from "$lib/Inputs.svelte";
+    import Preview from "$lib/Preview.svelte";
     import params from "$lib/params";
     $: url = `${window.location.protocol}//${window.location.host}/${window.btoa(new URLSearchParams(Object.fromEntries(Object.entries($params).filter(([_, v]) => v !== ''))).toString())}`
 </script>
 <main>
 
 <section>
-  <div class="header"><h1>rickhider</h1></div>
+  <div>
+  <h1>rickhider</h1>
   <Inputs/>
-  <button on:click={() => alert("hi")}>Shorten Link</button>
-
+  <button on:click={() => console.log("hi")}>Shorten Link</button>
+</div>
   </section>
   <section>
-    <!-- preview of meta tag => embedded rickroll URL -->
+    <div>
+    <Preview />
+    <div>
     {#if url}
     <a href={url}>{url}</a>
   {/if}
-</section>
+    </div>
+  </div>
+  </section>
 </main>
 <style lang="scss">
   a {
@@ -26,13 +32,18 @@
   main {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     height: 100%;
   }
 
   section {
     flex: 1;
-    margin: 6rem;
+    height: 100%;
+    display: flex;
+}
+
+section > div {
+  flex: 1;
+  margin: 1rem 5rem;
 }
 
 @media (max-width: 600px) {
@@ -49,25 +60,24 @@ button {
   width: 100%;
   font-size: 20px;
   border-radius: 5px;
-  background-image: url("https://cdn.vox-cdn.com/thumbor/Si2spWe-6jYnWh8roDPVRV7izC4=/0x0:1192x795/1400x788/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: top;
   margin: 1rem 0;
+  background-color: #843c33;
+  color: #f2f2f2;
+}
+
+button:hover, button:focus {
+  background-color: #7a372e;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #6f332a;
 }
 
 h1 {
   text-align: center;
-  font-size: 40px;
-}
-
-.header {
-  background-clip: text;
-  background-image: url("https://cdn.vox-cdn.com/thumbor/Si2spWe-6jYnWh8roDPVRV7izC4=/0x0:1192x795/1400x788/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg");
-  -webkit-background-clip: text;
-  color: transparent;
-  background-position-x: center;
-  background-position-y: top;
-
+  color: #843c33;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 </style>

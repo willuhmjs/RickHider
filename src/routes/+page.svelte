@@ -6,6 +6,7 @@
       th: '#1e2327',
       ty: 'Type',
       i: 'https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png',
+      u: 'https://github.com',
     };
     let labels = {
       t: 'Title',
@@ -13,6 +14,7 @@
       th: 'Theme Color',
       ty: 'Type',
       i: 'Image',
+      u: 'URL',
     };
     let params: AvailableMeta = {
         ty: 'summary',
@@ -20,6 +22,7 @@
         d: '',
         th: '',
         i: '',
+        u: '',
     }
     $: url = `${window.location.protocol}//${window.location.host}/${window.btoa(new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([_, v]) => v !== ''))).toString())}`
 </script>

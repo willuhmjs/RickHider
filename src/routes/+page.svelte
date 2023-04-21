@@ -33,8 +33,6 @@
       <select bind:value={params[key]}>
         <option value="summary">summary</option>
         <option value="summary_large_image">summary_large_image</option>
-        <option value="app">app</option>
-        <option value="player">player</option>
       </select>
     </div>
   {:else}

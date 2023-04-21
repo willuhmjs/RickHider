@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Inputs from '$lib/Inputs.svelte';
 	import Preview from '$lib/Preview.svelte';
-	import params from '$lib/params';
+	import { metaStore } from '$lib/meta';
 	$: url = `${window.location.protocol}//${window.location.host}/${window.btoa(
 		new URLSearchParams(
-			Object.fromEntries(Object.entries($params).filter(([_, v]) => v !== ''))
+			Object.fromEntries(Object.entries($metaStore).filter(([_, v]) => v !== ''))
 		).toString()
 	)}`;
 </script>

@@ -1,24 +1,24 @@
 <script lang="ts">
-	import params from '$lib/params';
+	import { metaStore } from '$lib/meta';
 </script>
 
 <div class="twitter-card">
-	{#if $params.i}
+	{#if $metaStore.i}
 		<div class="twitter-img-div">
 			<img
-				src={$params.i}
+				src={$metaStore.i}
 				alt="Selected img preview"
 				on:load={(e) => (e.target.style.display = 'block')}
 				on:error={(e) => (e.target.style.display = 'none')}
 			/>
 			<!--
-        <img src={$params.i ? $params.i : `https://via.placeholder.com/341x177.png?text=${$params.t || "341x177"}`} alt="OpenGraph"/>
+        <img src={$metaStore.i ? $metaStore.i : `https://via.placeholder.com/341x177.png?text=${$metaStore.t || "341x177"}`} alt="OpenGraph"/>
         --->
 		</div>
 	{/if}
 	<div class="twitter-textarea">
-		<p class="twitter-title">{$params.t}</p>
-		<p class="twitter-description">{$params.d}</p>
+		<p class="twitter-title">{$metaStore.t}</p>
+		<p class="twitter-description">{$metaStore.d}</p>
 	</div>
 </div>
 

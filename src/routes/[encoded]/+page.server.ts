@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import type { AvailableMeta } from '$lib/types.ts';
+import type { AvailableMeta } from '$lib/meta';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {

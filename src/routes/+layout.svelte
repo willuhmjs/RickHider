@@ -1,4 +1,5 @@
 <script>
-    import "./style.scss";
+	import './style.scss';
 </script>
-<slot/>
+
+<slot />

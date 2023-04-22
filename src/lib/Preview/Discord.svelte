@@ -7,7 +7,7 @@
         <p class="discord-title">{($metaStore.t || $metaStore.d) ? ($metaStore.t || "") : placeholders.t}</p>
 		<p class="discord-description">{($metaStore.t || $metaStore.d) ? ($metaStore.d || "") : placeholders.d}</p>
     </div>
-    <img src={$metaStore.i} alt="OpenGraph" on:error={(e) => e.target.style.display = 'none'} on:load={(e) => e.target.display = 'block'}/>
+    <img src={($metaStore.t || $metaStore.d || $metaStore.i) ? ($metaStore.i || "") : placeholders.i} alt="OpenGraph" on:error={(e) => e.target.style.display = 'none'} on:load={(e) => e.target.display = 'block'}/>
 </div>
 
 <style lang="scss">
@@ -21,7 +21,7 @@
   max-width: 350px;
   padding: 10px;
   display: inline-flex;
-  gap: 3px;
+  gap: 5px;
 }
 
 .discord-textarea {

@@ -5,7 +5,7 @@
 <div class="twitter-card">
     <div>
         <img
-            src={$metaStore.i || "https://via.placeholder.com/129x129.png?text=129x129"}
+            src={($metaStore.t || $metaStore.d || $metaStore.i) ? ($metaStore.i || "https://via.placeholder.com/129x129.png?text=129x129") : placeholders.i}
             alt="Selected img preview"
             on:load={(e) => (e.target.style.display = 'block')}
             on:error={(e) => (e.target.src = 'https://via.placeholder.com/129x129.png?text=129x129')}

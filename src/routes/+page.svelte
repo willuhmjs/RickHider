@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Inputs from '$lib/Inputs.svelte';
-	import Preview from '$lib/Preview.svelte';
+	import PreviewMenu from '$lib/Preview/PreviewMenu.svelte';
 	import { metaStore } from '$lib/meta';
 	$: url = `${window.location.protocol}//${window.location.host}/${window.btoa(
 		new URLSearchParams(
@@ -14,12 +14,12 @@
 		<div>
 			<h1>rickhider</h1>
 			<Inputs />
-			<button on:click={() => console.log('hi')}>Shorten Link</button>
+			<button class="shortenButton" on:click={() => console.log('hi')}>Shorten Link</button>
 		</div>
 	</section>
 	<section>
 		<div>
-			<Preview />
+			<PreviewMenu />
 			<div>
 				{#if url}
 					<a href={url}>{url}</a>
@@ -56,28 +56,25 @@
 			flex-direction: column;
 			margin: 1rem;
 		}
+
+    section > div {
+      margin: 0;
+    }
 	}
 
-	button {
-		padding: 0.8rem;
-		border: 0;
-		font-weight: bold;
-		width: 100%;
-		font-size: 20px;
-		border-radius: 5px;
-		margin: 1rem 0;
-		background-color: #843c33;
-		color: #f2f2f2;
-	}
+  .shortenButton {
+    background-color: #843c33;
+	  color: #f2f2f2;
+  }
 
-	button:hover,
-	button:focus {
-		background-color: #7a372e;
+	.shortenButton:hover,
+	.shortenButton:focus {
+		background-color: #6e3028;
 		cursor: pointer;
 	}
 
-	button:active {
-		background-color: #6f332a;
+	.shortenButton:active {
+		background-color: #632e26;
 	}
 
 	h1 {

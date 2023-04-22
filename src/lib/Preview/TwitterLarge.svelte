@@ -26,20 +26,20 @@
 	.twitter-card {
 		display: flex;
 		flex-direction: column;
-		max-width: 342px;
+		max-width: 442px;
 		width: 100%;
 		border-radius: 11px;
 		border: 1px solid #cfd9de;
 	}
 
 	.twitter-textarea {
-		max-width: 341px;
+		max-width: 100%;
 		min-height: 76px;
 		width: 100%;
 		max-height: 155px;
 		padding: 0.5rem;
 		overflow: hidden;
-		word-wrap: break-all;
+		word-wrap: break-word;
 	}
 
 	.twitter-title,
@@ -53,8 +53,8 @@
 	}
 
 	img {
-		width: 341px;
-		height: 177px;
+		width: 100%;
+		height: 277px;
 		border-radius: 11px 11px 0 0;
 		display: none;
 		object-fit: cover;

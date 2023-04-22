@@ -10,7 +10,7 @@ export interface AvailableMeta {
 
 export const placeholders: AvailableMeta = {
 	t: 'GitHub: Let’s build from here',
-	d: 'GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea...',
+	d: 'GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community...',
 	th: '#1e2327',
 	ty: 'summary',
 	i: 'https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png'

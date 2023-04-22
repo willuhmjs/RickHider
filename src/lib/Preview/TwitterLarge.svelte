@@ -30,6 +30,7 @@
 		width: 100%;
 		border-radius: 11px;
 		border: 1px solid #cfd9de;
+		margin: 0 auto;
 	}
 
 	.twitter-textarea {

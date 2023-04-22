@@ -30,7 +30,7 @@
 		border: 1px solid #cfd9de;
 		max-height: 8.06rem;
 		overflow: hidden;
-
+		margin: 0 auto;
 	}
 
 	.twitter-textarea {

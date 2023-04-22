@@ -7,7 +7,7 @@
 	{#if data.t}
 		<title>{data.t}</title>
 	{/if}
-	<meta property="og:type" content={data.ty || 'summary'} />
+	<meta property="og:type" content="webpage" />
 	<meta name="theme-color" content={data.th} />
 	<meta name="description" content={data.d} />
 	<meta property="og:title" content={data.t} />

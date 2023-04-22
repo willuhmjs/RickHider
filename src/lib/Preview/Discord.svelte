@@ -21,7 +21,7 @@
   max-width: 350px;
   padding: 10px;
   display: inline-flex;
-  gap: 5px;
+  gap: 0.8rem;
 }
 
 .discord-textarea {

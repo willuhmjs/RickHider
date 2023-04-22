@@ -2,6 +2,7 @@
     import { metaStore } from '$lib/meta';
 	import TwitterLarge from '$lib/Preview/TwitterLarge.svelte';
     import Twitter from '$lib/Preview/Twitter.svelte';
+	import Discord from '$lib/Preview/Discord.svelte';
     let selectedPreview = 'TwitterFacebook';
 </script>
 <form>
@@ -42,6 +43,10 @@ label {
   border-radius: 0 5px 5px 0;
   background-color: #5865F2;
   border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 input[type="radio"] {
@@ -66,4 +71,6 @@ input[type="radio"] {
     {:else}
     <Twitter />
     {/if}
+{:else}
+    <Discord />
 {/if}

@@ -1,13 +1,13 @@
 <svelte:head>
-	<meta name="title" content="Rickroll - Custom Rickroll Generator" />
+	<meta name="title" content="Rickhider - Custom Rickroll Generator" />
 	<meta name="description" content="Rickroll your friends by decieving them with custom metadata." />
   	<meta property="og:type" content='summary' />
 	<meta property="theme-color" content="#843c33" />
-	<meta name="og:title" content="Rickroll - Custom Rickroll Generator" />
+	<meta name="og:title" content="Rickhider - Custom Rickroll Generator" />
 	<meta name="og:description" content="Rickroll your friends by decieving them with custom metadata." />
 	<meta name="og:image" content={`${window.location.protocol}//${window.location.host}/favicon.png`}/>
 	<meta name="twitter:card" content='summary' />
-	<meta name="twitter:title" content="Rickroll - Custom Rickroll Generator" />
+	<meta name="twitter:title" content="Rickhider - Custom Rickroll Generator" />
 	<meta name="twitter:description" content="Rickroll your friends by decieving them with custom metadata." />
 	<meta name="twitter:image" content={`${window.location.protocol}//${window.location.host}/favicon.png`}/>
 </svelte:head>

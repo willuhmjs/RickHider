@@ -28,7 +28,7 @@
 		width: 100%;
 		border-radius: 0.69rem;
 		border: 1px solid #cfd9de;
-		max-height: 8.5rem;
+		height: 8.5rem;
 		overflow: hidden;
 		margin: 0 auto;
 	}
@@ -36,9 +36,9 @@
 	.twitter-textarea {
 		max-width: 100%;
 		width: 100%;
-        height: 100%;
 		padding: 0.5rem;
 		overflow: hidden;
+		margin: auto 0;
 		word-wrap: break-word;
 	}
 

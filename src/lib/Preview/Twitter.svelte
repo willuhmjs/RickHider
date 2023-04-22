@@ -3,7 +3,7 @@
 </script>
 
 <div class="twitter-card">
-    <div class="twitter-img-div">
+    <div>
         <img
             src={$metaStore.i || "https://via.placeholder.com/129x129.png?text=129x129"}
             alt="Selected img preview"
@@ -28,7 +28,7 @@
 		width: 100%;
 		border-radius: 0.69rem;
 		border: 1px solid #cfd9de;
-		max-height: 8.06rem;
+		max-height: 8.5rem;
 		overflow: hidden;
 		margin: 0 auto;
 	}

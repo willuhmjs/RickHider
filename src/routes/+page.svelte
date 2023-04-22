@@ -82,5 +82,6 @@
 		color: #843c33;
 		font-size: 3rem;
 		margin-bottom: 1rem;
+    margin-top: 0;
 	}
 </style>

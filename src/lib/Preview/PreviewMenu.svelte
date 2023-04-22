@@ -3,6 +3,7 @@
 	import TwitterLarge from '$lib/Preview/TwitterLarge.svelte';
     import Twitter from '$lib/Preview/Twitter.svelte';
 	import Discord from '$lib/Preview/Discord.svelte';
+	import DiscordLarge from '$lib/Preview/DiscordLarge.svelte';
     let selectedPreview = 'TwitterFacebook';
 </script>
 <form>
@@ -67,10 +68,14 @@ input[type="radio"] {
 
 {#if selectedPreview === 'TwitterFacebook'}
     {#if $metaStore.ty === 'summary_large_image' && ($metaStore.t || $metaStore.d || $metaStore.i)}
-    <TwitterLarge />
+      <TwitterLarge />
     {:else}
-    <Twitter />
+      <Twitter />
     {/if}
 {:else}
+  {#if $metaStore.ty === 'summary_large_image' && ($metaStore.t || $metaStore.d || $metaStore.i)}
+    <DiscordLarge />
+  {:else}
     <Discord />
+  {/if}
 {/if}

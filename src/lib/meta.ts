@@ -9,11 +9,11 @@ export interface AvailableMeta {
 }
 
 export const placeholders: AvailableMeta = {
-	t: 'GitHub: Let’s build from here',
-	d: 'GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community...',
-	th: '#1e2327',
+	t: 'Rickhider - Custom Rickroll Generator',
+	d: 'Rickroll your friends by decieving them with custom metadata.',
+	th: '#843c33',
 	ty: 'summary',
-	i: 'https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png'
+	i: `${window.location.protocol}//${window.location.host}/favicon.png`
 };
 export const labels: AvailableMeta = {
 	t: 'Title',

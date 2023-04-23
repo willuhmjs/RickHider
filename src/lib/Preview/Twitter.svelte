@@ -3,20 +3,26 @@
 </script>
 
 <div class="twitter-card">
-    <div>
-        <img
-            src={($metaStore.t || $metaStore.d || $metaStore.i) ? ($metaStore.i || "https://via.placeholder.com/129x129.png?text=129x129") : placeholders.i}
-            alt="Selected img preview"
-            on:load={(e) => (e.target.style.display = 'block')}
-            on:error={(e) => (e.target.src = 'https://via.placeholder.com/129x129.png?text=129x129')}
-        />
-        <!--
+	<div>
+		<img
+			src={$metaStore.t || $metaStore.d || $metaStore.i
+				? $metaStore.i || 'https://via.placeholder.com/129x129.png?text=129x129'
+				: placeholders.i}
+			alt="Selected img preview"
+			on:load={(e) => (e.target.style.display = 'block')}
+			on:error={(e) => (e.target.src = 'https://via.placeholder.com/129x129.png?text=129x129')}
+		/>
+		<!--
     <img src={$metaStore.i ? $metaStore.i : `https://via.placeholder.com/341x177.png?text=${$metaStore.t || "341x177"}`} alt="OpenGraph"/>
     --->
-    </div>
+	</div>
 	<div class="twitter-textarea">
-		<p class="twitter-title">{($metaStore.t || $metaStore.d) ? ($metaStore.t || "") : placeholders.t}</p>
-		<p class="twitter-description">{($metaStore.t || $metaStore.d) ? ($metaStore.d || "") : placeholders.d}</p>
+		<p class="twitter-title">
+			{$metaStore.t || $metaStore.d ? $metaStore.t || '' : placeholders.t}
+		</p>
+		<p class="twitter-description">
+			{$metaStore.t || $metaStore.d ? $metaStore.d || '' : placeholders.d}
+		</p>
 	</div>
 </div>
 
@@ -54,6 +60,6 @@
 	img {
 		max-width: 8.06rem;
 		height: 100%;
-        border-radius: 11px 0 0 11px;
+		border-radius: 11px 0 0 11px;
 	}
 </style>

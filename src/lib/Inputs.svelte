@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { placeholders, labels, metaStore } from '$lib/meta';
-
 </script>
 
 {#each Object.keys($metaStore) as key}

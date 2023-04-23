@@ -1,5 +1,5 @@
 <script lang="ts">
-		import './style.scss';
+	import './style.scss';
 	import Inputs from '$lib/Inputs.svelte';
 	import PreviewMenu from '$lib/Preview/PreviewMenu.svelte';
 	import { metaStore } from '$lib/meta';
@@ -8,20 +8,34 @@
 			Object.fromEntries(Object.entries($metaStore).filter(([_, v]) => v !== ''))
 		).toString()
 	)}`;
-	
 </script>
 
 <svelte:head>
-		<meta name="title" content="Rickhider - Custom Rickroll Generator" />
-		<meta name="description" content="Rickroll your friends by decieving them with custom metadata." />
-		  <meta property="og:type" content='website' />
-		<meta property="theme-color" content="#843c33" />
-		<meta name="og:title" content="Rickhider - Custom Rickroll Generator" />
-		<meta name="og:description" content="Rickroll your friends by decieving them with custom metadata." />
-		<meta name="twitter:card" content='summary' />
-		<meta name="twitter:title" content="Rickhider - Custom Rickroll Generator" />
-		<meta name="twitter:description" content="Rickroll your friends by decieving them with custom metadata." />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta name="title" content="Rickhider - Custom Rickroll Generator" />
+	<meta
+		name="description"
+		content="Rickroll your friends by decieving them with custom metadata."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="theme-color" content="#843c33" />
+	<meta name="og:title" content="Rickhider - Custom Rickroll Generator" />
+	<meta
+		name="og:description"
+		content="Rickroll your friends by decieving them with custom metadata."
+	/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Rickhider - Custom Rickroll Generator" />
+	<meta
+		name="twitter:description"
+		content="Rickroll your friends by decieving them with custom metadata."
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
 </svelte:head>
 
 <main>
@@ -72,15 +86,15 @@
 			margin: 1rem;
 		}
 
-    section > div {
-      margin: 0;
-    }
+		section > div {
+			margin: 0;
+		}
 	}
 
-  .shortenButton {
-    background-color: #843c33;
-	  color: #f2f2f2;
-  }
+	.shortenButton {
+		background-color: #843c33;
+		color: #f2f2f2;
+	}
 
 	.shortenButton:hover,
 	.shortenButton:focus {
@@ -97,6 +111,6 @@
 		color: #843c33;
 		font-size: 3rem;
 		margin-bottom: 1rem;
-    margin-top: 0;
+		margin-top: 0;
 	}
 </style>

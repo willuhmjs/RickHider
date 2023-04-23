@@ -17,8 +17,12 @@
 		</div>
 	{/if}
 	<div class="twitter-textarea">
-		<p class="twitter-title">{($metaStore.t || $metaStore.d) ? ($metaStore.t || "") : placeholders.t}</p>
-		<p class="twitter-description">{($metaStore.t || $metaStore.d) ? ($metaStore.d || "") : placeholders.d}</p>
+		<p class="twitter-title">
+			{$metaStore.t || $metaStore.d ? $metaStore.t || '' : placeholders.t}
+		</p>
+		<p class="twitter-description">
+			{$metaStore.t || $metaStore.d ? $metaStore.d || '' : placeholders.d}
+		</p>
 	</div>
 </div>
 

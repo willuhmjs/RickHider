@@ -23,7 +23,7 @@ export const labels: AvailableMeta = {
 	i: 'Image'
 };
 
-export const metaStore =  writable<AvailableMeta>({
+export const metaStore = writable<AvailableMeta>({
 	ty: 'summary',
 	t: '',
 	d: '',

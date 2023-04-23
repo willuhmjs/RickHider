@@ -3,11 +3,11 @@
 	import Inputs from '$lib/Inputs.svelte';
 	import PreviewMenu from '$lib/Preview/PreviewMenu.svelte';
 	import { metaStore } from '$lib/meta';
-	$: url = `${window.location.protocol}//${window.location.host}/${window.btoa(
+	$: url = globalThis.window ? `${globalThis.window.location.protocol}//${globalThis.window.location.host}/${globalThis.window.btoa(
 		new URLSearchParams(
 			Object.fromEntries(Object.entries($metaStore).filter(([_, v]) => v !== ''))
 		).toString()
-	)}`;
+	)}` : null;
 </script>
 
 <svelte:head>
@@ -23,6 +23,7 @@
 		name="og:description"
 		content="Rickroll your friends by decieving them with custom metadata."
 	/>
+	<meta name="og:image" content="https://rickhider.vercel.app/favicon.png" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Rickhider - Custom Rickroll Generator" />
 	<meta

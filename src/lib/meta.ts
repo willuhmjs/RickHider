@@ -13,7 +13,7 @@ export const placeholders: AvailableMeta = {
 	d: 'Rickroll your friends by decieving them with custom metadata.',
 	th: '#843c33',
 	ty: 'summary',
-	i: `${window.location.protocol}//${window.location.host}/favicon.png`
+	i: globalThis.window ? `${window.location.protocol}//${window.location.host}/favicon.png` : ''
 };
 export const labels: AvailableMeta = {
 	t: 'Title',

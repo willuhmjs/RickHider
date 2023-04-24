@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<meta name="title" content="Rickhider - Custom Rickroll Generator" />
+	<title>Rickhider - Custom Rickroll Generator</title>
 	<meta
 		name="description"
 		content="Rickroll your friends by decieving them with custom metadata."

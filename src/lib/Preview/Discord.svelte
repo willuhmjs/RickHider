@@ -2,6 +2,7 @@
 	import { metaStore, placeholders } from '$lib/meta';
 </script>
 
+<div class="wrapper">
 <div class="discord-card" style="border-left: 5px solid {$metaStore.th || placeholders.th}">
 	<div class="discord-textarea">
 		<p class="discord-title">
@@ -18,8 +19,13 @@
 		on:load={(e) => (e.target.display = 'block')}
 	/>
 </div>
+</div>
 
 <style lang="scss">
+	.wrapper {
+		display: flex;
+		justify-content: center;
+	}
 	.discord-card {
 		background-color: #2c2f33;
 		border-radius: 5px;
@@ -31,6 +37,7 @@
 		padding: 10px;
 		display: inline-flex;
 		gap: 0.8rem;
+		margin: 1rem auto;
 	}
 
 	.discord-textarea {

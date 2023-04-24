@@ -27,10 +27,10 @@
 		color: #f2f2f2;
 		font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		font-size: 14px;
-		margin: 0 auto;
 		max-width: 350px;
 		padding: 10px;
 		width: 100%;
+		margin: 1rem auto;
 	}
 
 	.discord-textarea {

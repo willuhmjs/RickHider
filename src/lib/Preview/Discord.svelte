@@ -3,17 +3,17 @@
 </script>
 
 <div class="wrapper">
-<div class="discord-card" style="border-left: 5px solid {$metaStore.th || placeholders.th}">
+<div class="discord-card" style="border-left: 5px solid {$metaStore.t || $metaStore.d || $metaStore.i || $metaStore.th ? ($metaStore.th || "#1e1f22") : placeholders.th}">
 	<div class="discord-textarea">
 		<p class="discord-title">
-			{$metaStore.t || $metaStore.d ? $metaStore.t || '' : placeholders.t}
+			{$metaStore.t || $metaStore.d || $metaStore.i || $metaStore.th ? '' : placeholders.t}
 		</p>
 		<p class="discord-description">
-			{$metaStore.t || $metaStore.d ? $metaStore.d || '' : placeholders.d}
+			{$metaStore.t || $metaStore.d || $metaStore.i || $metaStore.th ? '' : placeholders.d}
 		</p>
 	</div>
 	<img
-		src={$metaStore.t || $metaStore.d || $metaStore.i ? $metaStore.i || '' : placeholders.i}
+		src={$metaStore.t || $metaStore.d || $metaStore.i || $metaStore.th ? $metaStore.i || '' : placeholders.i}
 		alt="OpenGraph"
 		on:error={(e) => (e.target.style.display = 'none')}
 		on:load={(e) => (e.target.display = 'block')}

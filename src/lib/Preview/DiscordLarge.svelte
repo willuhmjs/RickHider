@@ -5,10 +5,10 @@
 <div class="discord-card" style="border-left: 5px solid {$metaStore.th || placeholders.th}">
 	<div class="discord-textarea">
 		<p class="discord-title">
-			{$metaStore.t || $metaStore.d ? $metaStore.t || '' : placeholders.t}
+			{$metaStore.t || $metaStore.d || $metaStore.t ? '' : placeholders.t}
 		</p>
 		<p class="discord-description">
-			{$metaStore.t || $metaStore.d ? $metaStore.d || '' : placeholders.d}
+			{$metaStore.t || $metaStore.d || $metaStore.i ? '' : placeholders.d}
 		</p>
 	</div>
 	<img

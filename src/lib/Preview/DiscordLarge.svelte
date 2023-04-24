@@ -2,7 +2,7 @@
 	import { metaStore, placeholders } from '$lib/meta';
 </script>
 
-<div class="discord-card" style="border-left: 5px solid {$metaStore.th || placeholders.th}">
+<div class="discord-card" style="border-left: 5px solid {$metaStore.t || $metaStore.d || $metaStore.th ? ($metaStore.th || "#1d1f22"): placeholders.th}">
 	<div class="discord-textarea">
 		<p class="discord-title">
 			{$metaStore.t || $metaStore.d ? $metaStore.t || '' : placeholders.t}

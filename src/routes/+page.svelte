@@ -30,6 +30,7 @@
 		name="twitter:description"
 		content="Rickroll your friends by decieving them with custom metadata."
 	/>
+	<meta name="twitter:image" content="https://rickhider.vercel.app/favicon.png" />
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"

@@ -4,6 +4,7 @@
 	import Twitter from '$lib/Preview/Twitter.svelte';
 	import Discord from '$lib/Preview/Discord.svelte';
 	import DiscordLarge from '$lib/Preview/DiscordLarge.svelte';
+	import Callout from '$lib/Callout.svelte';
 	let selectedPreview = 'TwitterFacebook';
 </script>
 
@@ -34,6 +35,9 @@
 	<DiscordLarge />
 {:else}
 	<Discord />
+{/if}
+{#if !($metaStore.t || $metaStore.d || $metaStore.i )}
+	<Callout>No card will be generated with the default configuration.</Callout>
 {/if}
 
 <style lang="scss">

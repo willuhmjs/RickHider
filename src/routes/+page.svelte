@@ -2,12 +2,7 @@
 	import './style.scss';
 	import Inputs from '$lib/Inputs.svelte';
 	import PreviewMenu from '$lib/Preview/PreviewMenu.svelte';
-	import { metaStore } from '$lib/meta';
-	$: url = globalThis.window ? `${globalThis.window.location.protocol}//${globalThis.window.location.host}/${globalThis.window.btoa(
-		new URLSearchParams(
-			Object.fromEntries(Object.entries($metaStore).filter(([_, v]) => v !== ''))
-		).toString()
-	)}` : null;
+	import Output from '$lib/Output.svelte';
 </script>
 
 <svelte:head>
@@ -31,13 +26,7 @@
 		content="Rickroll your friends by decieving them with custom metadata."
 	/>
 	<meta name="twitter:image" content="https://rickhider.vercel.app/favicon.png" />
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-	/>
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
 </svelte:head>
 <h1>rickhider</h1>
 
@@ -46,27 +35,19 @@
 		<div>
 			<h2>Card Settings</h2>
 			<Inputs />
-			<button class="shortenButton" on:click={() => console.log('hi')}>Shorten Link</button>
 		</div>
 	</section>
 	<section>
 		<div>
 			<h2>Card Preview</h2>
 			<PreviewMenu />
-			<div>
-				{#if url}
-					<a href={url}>{url}</a>
-				{/if}
-			</div>
+			<h2>Generated Link</h2>
+			<Output />
 		</div>
 	</section>
 </main>
 
 <style lang="scss">
-	a {
-		word-break: break-word;
-	}
-
 	main {
 		display: flex;
 		justify-content: space-around;
@@ -93,21 +74,6 @@
 		}
 	}
 
-	.shortenButton {
-		background-color: #843c33;
-		color: #f2f2f2;
-	}
-
-	.shortenButton:hover,
-	.shortenButton:focus {
-		background-color: #6e3028;
-		cursor: pointer;
-	}
-
-	.shortenButton:active {
-		background-color: #632e26;
-	}
-
 	h1 {
 		text-align: center;
 		font-size: 3rem;
@@ -117,5 +83,9 @@
 
 	h1, h2 {
 		color: #843c33;
+	}
+
+	h2 {
+		margin-bottom: 0.7rem;
 	}
 </style>

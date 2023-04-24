@@ -39,17 +39,19 @@
 		referrerpolicy="no-referrer"
 	/>
 </svelte:head>
+<h1>rickhider</h1>
 
 <main>
 	<section>
 		<div>
-			<h1>rickhider</h1>
+			<h2>Card Settings</h2>
 			<Inputs />
 			<button class="shortenButton" on:click={() => console.log('hi')}>Shorten Link</button>
 		</div>
 	</section>
 	<section>
 		<div>
+			<h2>Card Preview</h2>
 			<PreviewMenu />
 			<div>
 				{#if url}
@@ -68,18 +70,16 @@
 	main {
 		display: flex;
 		justify-content: space-around;
-		height: 100%;
 	}
 
 	section {
 		flex: 1;
-		height: 100%;
 		display: flex;
 	}
 
 	section > div {
 		flex: 1;
-		margin: 1rem 5rem;
+		margin: 0 5rem;
 	}
 
 	@media (max-width: 600px) {
@@ -110,9 +110,12 @@
 
 	h1 {
 		text-align: center;
-		color: #843c33;
 		font-size: 3rem;
-		margin-bottom: 1rem;
-		margin-top: 0;
+		margin: 0 auto;
+		padding: 1rem 0;
+}
+
+	h1, h2 {
+		color: #843c33;
 	}
 </style>
